@@ -15,7 +15,7 @@ fg = cv.imread(infile)
 bg = cv.imread(background)
 
 # keep only the edge + dilation on the fg picture, set everything else to transparent black
-edges = cv.Canny(fg, 10, 150)
+edges = cv.Canny(fg, 10, 100)
 kernel = np.ones((dilate, dilate), np.uint8)
 eroded = cv.dilate(edges, kernel, iterations=1)
 masked = cv.bitwise_and(fg, fg, mask=eroded)

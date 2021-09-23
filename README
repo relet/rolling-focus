@@ -14,11 +14,31 @@ blended/fused focus stack.
 
 ### Example
 
-soon.
+Here are some hairy spiders. 
 
-### Setup
+The instant preview with merged masks
 
-soon.
+![Hairy Legs](examples/hairy-spider-legs_merged.jpg)
+
+The result of running enfuse over the entire image stack below.
+
+![Hairy Legs](examples/hairy-spider-legs_fused.jpg)
+
+
+### Setup (roughly)
+
+* Connect your phone via USB and adb connect. 
+* Attach it to the eyepiece of a microscope, or maybe on a digiscope?
+* Open your favorite camera app
+* Adjust the coordinates in getpic.sh to hit the shutter button
+* Adjust the download path in getpic.sh to download from the correct folder
+* Run the roll.sh loop, which keeps taking pictures, downloading them and
+  merging them together until you press crtl-c
+* Continuously adjust the focus of the picture, for example by moving your
+  specimen table up or down.
+* Enjoy the live preview
+* Ctrl-C to abort
+* fuse the image collection with enfuse and compare the results.
 
 ### Requirements
 

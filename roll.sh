@@ -3,7 +3,7 @@ set -x
 stty -echoctl # hide ^C
 
 # some settings
-ERODE=30
+ERODE=5
 SLEEP=1
 VIEWER=eog
 
