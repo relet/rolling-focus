@@ -1,0 +1,27 @@
+# rolling focus
+
+Experiments in real-time merging low depth of field image series. 
+
+In particular taking pictures through a microscope, using an android device.
+DOF in microscopy is very low, hence the need to apply focus stacking. 
+
+I often 
+want to apply enfuse on image stacks of up to 300 pictures, which is 
+prohibitively slow for a live preview. I therefore resorted to OpenCV to produce
+quick-and-dirty focus detection and crop and paste the results along the 
+detected areas. The result is a pasted focus stack, as opposed to a 
+blended/fused focus stack.
+
+### Example
+
+soon.
+
+### Setup
+
+soon.
+
+### Requirements
+
+* adb connection to your android device
+* python3-opencv for the live preview
+* enfuse for the final results
