@@ -7,5 +7,5 @@ FILE=$(adb shell 'ls $EXTERNAL_STORAGE/DCIM/*.jpg | head -n1')
 adb pull $FILE
 adb shell "rm $FILE"
 
-FILE=$(ls *.jpg|grep -v collection|head -n1)
-mv $FILE collection/
+#FILE=$(ls *.jpg|grep -v collection|head -n1)
+#mv $FILE collection/
