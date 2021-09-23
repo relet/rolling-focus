@@ -14,13 +14,13 @@ blended/fused focus stack.
 
 ### Example
 
-Here are some hairy spiders. 
+Here are some hairy spider legs, at three separate depths from the viewer. 
 
-The instant preview with merged masks
+The instant preview with merged masks. Since we employ edge detection, only edges in focus are merged. Uniformly colored areas without structure are not detected as within focus. 
 
 ![Hairy Legs](examples/hairy-spider-legs_merged.jpg)
 
-The result of running enfuse over the entire image stack below.
+The result of running enfuse over the entire image stack below. Looks nicer, but the instant preview already gives you an idea of which areas will have been merged. 
 
 ![Hairy Legs](examples/hairy-spider-legs_fused.jpg)
 
