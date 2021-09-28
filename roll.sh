@@ -7,7 +7,26 @@ ERODE=5
 SLEEP=1
 VIEWER=eog
 
+function cleanup () {
+    ./enfuse/auto.sh collection || ./enfuse/steps.sh collection
+    pkill $VIEWER
+    rm merged.jpg
+    rm merged.png
+    TARGET=target/$(date +%s.jpg)
+    mv collection.jpg $TARGET
+    rm *.jpg
+    nohup $VIEWER $TARGET &
+    exit 0
+}
+
+trap cleanup SIGINT
+
 mkdir -p collection
+mkdir -p target
+rm collection/*.jpg
+rm nohup.out
+adb shell rm /sdcard/DCIM/*.jpg
+pkill $VIEWER
 
 while true; do
   ./android/getpic.sh
