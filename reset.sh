@@ -1,0 +1,2 @@
+rm collection/*
+rm target/*
