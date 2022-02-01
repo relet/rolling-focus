@@ -1,2 +1,4 @@
-rm collection/*
-rm target/*
+echo "IF THATS NOT WHAT YOU WANT ABORT NOW"
+read
+rm -r collection/* 2>/dev/null
+rm target/*        2>/dev/null

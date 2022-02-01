@@ -8,7 +8,11 @@ SLEEP=1
 VIEWER=eog
 
 function cleanup () {
-    ./enfuse/auto.sh collection || ./enfuse/steps.sh collection
+    ./enfuse/auto.sh collection || {
+      echo "Failed single-step stitching. Trying multistep"
+      read 
+      ./enfuse/steps.sh collection
+    }
     pkill $VIEWER
     rm merged.jpg
     rm merged.png
